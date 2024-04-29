@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.miniature {
+  width: 8%;
+}
+
+img {
+  cursor: pointer;
+}
+
+.article {
+  width: 92%;
+}
+
+.mdc-card {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+
+.footer {
+  text-align: -webkit-center;
+}
+
+.mat-mdc-card-title, .mat-mdc-card-subtitle {
+  display: table-header-group;
+  text-align: center;
+  margin: 0;
+  width: 15%;
+}
+
+.alert {
+  color: red;
+}
+
+.warning {
+  color: orange;
+}
+
+.info {
+  color: green;
+}
+
+.btn {
+  z-index: 0;
+}

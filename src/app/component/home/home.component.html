@@ -1,0 +1,5 @@
+<div class="container">
+  @for(article of articles; track article.name) {
+    <app-article [article]="article" (buy)="addArticle($event)"></app-article>
+  }
+</div>

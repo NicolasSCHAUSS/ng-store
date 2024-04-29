@@ -1,0 +1,9 @@
+<div class="caddy">
+  <div class="caddy-header">Liste d'achat</div>
+  @for(article of articles; track article.name) {
+    <div class="caddy-article">
+      <app-article [article]="article" [isInCaddy]="true" (remove)="removeArticle($event)"></app-article>
+    </div>
+  }
+  <div class="caddy-footer">Total {{getTotal() | currency:'EUR'}}</div>
+</div>

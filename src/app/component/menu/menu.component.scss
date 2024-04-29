@@ -1,0 +1,28 @@
+.title {
+  font-size: 5vh;
+  cursor: pointer;
+  align-self: center;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.menu {
+  height: 100px;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: visible;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.row {
+  align-items: baseline;
+}
+
+.search {
+  margin-right: 1vh;
+}

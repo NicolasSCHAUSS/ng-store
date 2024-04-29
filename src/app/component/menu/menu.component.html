@@ -1,0 +1,33 @@
+<mat-toolbar color="primary" class="menu">
+  <mat-toolbar-row class="row">
+    <span class="title" (click)="goHome()">e-Commerce</span>
+    <span class="spacer"></span>
+    <span *ngIf="this.searchField">
+      <mat-icon class="search">search</mat-icon>
+      <mat-form-field>
+        <mat-label>Rechercher</mat-label>
+        <input type="search" matInput #search (keydown.enter)="onSearch(search.value)">
+      </mat-form-field>
+    </span>
+    <span>
+      <button mat-icon-button (click)="goCaddy()">
+        <mat-icon matBadge="{{this.caddyCount}}" matBadgeColor="warn" aria-hidden="false">shopping_cart</mat-icon>
+      </button>
+    </span>
+    <span>
+      <button mat-icon-button [matMenuTriggerFor]="rootMenu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #rootMenu="matMenu">
+        <button mat-menu-item (click)="goLogin()">
+          <mat-icon>account_circle</mat-icon>
+          Connexion
+        </button>
+        <button mat-menu-item (click)="goAbout()">
+          <mat-icon>help</mat-icon>
+          A propos
+        </button>
+      </mat-menu>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>

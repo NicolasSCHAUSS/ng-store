@@ -1,0 +1,35 @@
+@if (!isInCaddy) {
+<mat-card>
+  <mat-card-title>{{article.name}}</mat-card-title>
+  <img mat-card-lg-image src='data:image/jpeg;base64,{{article.image}}' (click)="details()"/>
+  <mat-card-content>{{article.description}}</mat-card-content>
+  <mat-card-footer class="footer">
+    <mat-card-title>{{article.price | currency:'EUR'}}</mat-card-title>
+    <mat-card-title [ngClass]="stockStyle()">{{article.stock | stock}}</mat-card-title>
+    <mat-card-actions>
+      <button class="btn" mat-raised-button color="primary" (click)="addArticle()">Acheter</button>
+    </mat-card-actions>
+  </mat-card-footer>
+</mat-card>
+}
+@else {
+<div class="container">
+  <img class="miniature" src='data:image/jpeg;base64,{{article.image}}' (click)="details()"/>
+  <mat-accordion class="article">
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{article.name}}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{article.price| currency:'EUR'}}
+        </mat-panel-description>
+        <button mat-raised-button color="warn" (click)="removeArticle($event)">Retirer</button>
+      </mat-expansion-panel-header>
+      <div>
+        {{article.description}}
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+}

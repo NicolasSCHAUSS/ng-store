@@ -1,0 +1,44 @@
+::ng-deep .row {
+  align-items: center !important;
+}
+
+.container {
+  text-align: -webkit-center;
+  margin-top: 20%;
+  z-index: 0;
+}
+
+.card {
+  width:30%;
+  background-color: #a1abe2;
+  padding: 10px;
+}
+
+.title {
+  font-weight: bold;
+  color: white;
+  align-self: center;
+}
+
+.footer {
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-label {
+  color: white;
+}
+
+mat-icon {
+  color:white;
+}
+
+input {
+  color: white !important;
+  outline-color: white !important;
+}

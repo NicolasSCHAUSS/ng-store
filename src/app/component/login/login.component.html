@@ -1,0 +1,22 @@
+<div class="container">
+  <mat-card class="card">
+      <mat-card-title class="title">Se connecter</mat-card-title>
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput #email value="user@admin.com">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Mot de passe</mat-label>
+          <input matInput #password [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-footer class="footer">
+        <button mat-stroked-button color="primary" (click)="goRegister()">S'inscrire</button>
+        <button mat-raised-button color="primary" (click)="connect(email.value, password.value)">Connexion</button>
+      </mat-card-footer>
+  </mat-card>
+</div>

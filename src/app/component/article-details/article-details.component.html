@@ -1,0 +1,16 @@
+<mat-card>
+  <div class="image">
+    <img src="data:image/jpeg;base64,{{article.image}}"/>
+  </div>
+  <div class="container">
+    <mat-card-title>{{article.name}}</mat-card-title>
+    <mat-card-content>{{article.description}}</mat-card-content>
+    <mat-card-footer>
+      <mat-card-title>{{article.price | currency:'EUR'}}</mat-card-title>
+      <mat-card-title [ngClass]="stockStyle()">{{article.stock | stock}}</mat-card-title>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="addArticle()">Acheter</button>
+      </mat-card-actions>
+    </mat-card-footer>
+  </div>
+</mat-card>
